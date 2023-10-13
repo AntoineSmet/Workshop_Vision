@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import OCR from "./components/Ocr";
+import Analysis from "./components/Analysis";
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isOcrVisible, setIsOcrVisible] = useState(false);
+  const [isAnalysisVisible, setIsAnalysisVisible] = useState(false);
+
+  const handleOcrClick = () => {
+    setIsOcrVisible(!isOcrVisible);
+  };
+  const handleAnalysisClick = () => {
+    setIsAnalysisVisible(!isAnalysisVisible);
+  };
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <img src="/icon-detective.svg" alt="icon detective" width={200} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <h1>Detective Pixel</h1>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginTop: "1rem",
+          marginBottom: "4rem",
+        }}
+      >
+        <div style={{ marginRight: "1rem" }}>
+          <img
+            src="/icon-book.svg"
+            alt="icon book"
+            width={100}
+            onClick={handleOcrClick}
+          />
+        </div>
+        <div>
+          <img
+            src="/icon-pictures.svg"
+            alt="icon pictures"
+            width={95}
+            onClick={handleAnalysisClick}
+          />
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {isOcrVisible && <OCR />}
+      {isAnalysisVisible && <Analysis />}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
