@@ -3,10 +3,6 @@
 
 ### Azure Ai vision ( Ocr / Analysis) 👩‍🔬🧪
 
-
-
-
-
 ## Installation
 
 ```bash
@@ -15,21 +11,26 @@
   npm i
   npm run dev
 ```
+Section 0: Beginning
 
-## 0
+    Create an Input Type File: Show how to create an HTML input element for file uploads and set up the necessary methods to handle image uploads.
+    Azure OCR API Integration: Explain how to make API calls to Azure's OCR service to extract text from images.
 
-creation d'un input type file avec sa méthode pour ajouter des photos
+Section 1: Text Extraction and Display
 
-Appel à l'api ocr d'azure
+    Sort and Filter JSON Data from the Azure OCR API to extract only the necessary text.
 
-## 1
+    Use State Management to manage the extracted text .
 
-trier le json et sortir que le texte necessaire
+    Display Extracted Text display the extracted text in your application's user interface.
 
-le mettre dans un use state
+    Error Handling: Implement error handling to address scenarios where the API returns empty strings or encounters other issues.
 
-afficher le texte
+Section 2: Analyzing Text
 
+    Similar Process to OCR: Explain that the process is similar to OCR but with a different API, likely for text analysis.
 
-petite gestion d'eereur si empty string
+    Reformulation: Reiterate the steps from Section 1 but for the text analysis API.
+
+    Demonstrate Results: Showcase the results of the text analysis, such as sentiment analysis, language detection, or any other insights provided by the API.
     
