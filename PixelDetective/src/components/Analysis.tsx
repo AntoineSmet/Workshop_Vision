@@ -20,12 +20,12 @@ function Analysis() {
           try {
             const binaryData = reader.result as ArrayBuffer;
             const response = await axios.post(
-              "endpoint/computervision/imageanalysis:analyze?api-version=2023-02-01-preview&features=denseCaptions",
+              "https://cpvision-demo.cognitiveservices.azure.com/computervision/imageanalysis:analyze?api-version=2023-02-01-preview&features=denseCaptions",
               binaryData,
               {
                 headers: {
                   "Ocp-Apim-Subscription-Key":
-                    "key",
+                    "20161334ea454e52af9e49c318d65b3c",
                   "Content-Type": "application/octet-stream",
                 },
               }

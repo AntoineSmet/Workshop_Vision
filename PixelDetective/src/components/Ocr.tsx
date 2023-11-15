@@ -22,11 +22,11 @@ function Ocr() {
         const formData = new FormData();
         formData.append("image", image);
         const response = await axios.post(
-          "endpoint/vision/v3.2/ocr",
+          "https://cpvision-demo.cognitiveservices.azure.com/vision/v3.2/ocr",
           formData,
           {
             headers: {
-              "Ocp-Apim-Subscription-Key": "key",
+              "Ocp-Apim-Subscription-Key": "20161334ea454e52af9e49c318d65b3c",
               "Content-Type": "multipart/form-data",
             },
           }
